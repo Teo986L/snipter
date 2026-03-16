@@ -1540,10 +1540,10 @@
         </div>
     </div>
 
-    <!-- ========== MODAL DO MANUAL ATUALIZADO ========== -->
+    <!-- ========== MODAL DO MANUAL COMPLETO ========== -->
     <div id="manual-modal" class="manual-modal">
         <div class="manual-header">
-            <h2><i class="fas fa-book-open"></i> Manual Completo</h2>
+            <h2><i class="fas fa-book-open"></i> Manual Completo v3.0</h2>
             <button class="close-manual-btn" onclick="closeManual()">
                 <i class="fas fa-times"></i>
             </button>
@@ -1563,27 +1563,9 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>SNIPER</td>
-                            <td>M1+M5+M15</td>
-                            <td>M1</td>
-                            <td>Day trader rápido</td>
-                            <td>1-15min</td>
-                        </tr>
-                        <tr>
-                            <td>CAÇADOR</td>
-                            <td>M5+M15+H1</td>
-                            <td>M5</td>
-                            <td>Ondas médias</td>
-                            <td>15-60min</td>
-                        </tr>
-                        <tr>
-                            <td>PESCADOR</td>
-                            <td>M15+H1+H4+H24</td>
-                            <td>M15</td>
-                            <td>Swing trader</td>
-                            <td>Horas/dias</td>
-                        </tr>
+                        <tr><td>SNIPER</td><td>M1+M5+M15</td><td>M1</td><td>Day trader rápido</td><td>1-15min</td></tr>
+                        <tr><td>CAÇADOR</td><td>M5+M15+H1</td><td>M5</td><td>Ondas médias</td><td>15-60min</td></tr>
+                        <tr><td>PESCADOR</td><td>M15+H1+H4+H24</td><td>M15</td><td>Swing trader</td><td>Horas/dias</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -1601,7 +1583,7 @@
                 </div>
             </div>
 
-            <!-- SEÇÃO 3: ESTRATÉGIA PARA ATIVOS ESPECIAIS (NOVA) -->
+            <!-- SEÇÃO 3: ESTRATÉGIA PARA ATIVOS ESPECIAIS -->
             <div class="manual-section">
                 <h3>🔥 Estratégia para Ativos Especiais</h3>
                 
@@ -1636,7 +1618,79 @@
                 </ul>
             </div>
 
-            <!-- SEÇÃO 4: DETECTOR DE CICLO (NOVA) -->
+            <!-- SEÇÃO 4: TABELA DE CONFIGURAÇÕES POR ATIVO ESPECIAL -->
+            <div class="manual-section">
+                <h3>📊 Configurações Específicas - Ativos Especiais</h3>
+                <table class="manual-table">
+                    <thead>
+                        <tr><th>Ativo</th><th>RSI Compra</th><th>RSI Venda</th><th>Personalidade</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>CRASH50</td><td>30</td><td>70</td><td>Tartaruga</td></tr>
+                        <tr><td>CRASH150</td><td>32</td><td>72</td><td>Lento</td></tr>
+                        <tr><td>CRASH300</td><td>35</td><td>75</td><td>Moderado</td></tr>
+                        <tr><td>CRASH500</td><td>40</td><td>92</td><td>Maratonista</td></tr>
+                        <tr><td>CRASH600</td><td>35</td><td>60</td><td>Velocista</td></tr>
+                        <tr><td>CRASH1000</td><td>35</td><td>60</td><td>Explosivo</td></tr>
+                        <tr><td>BOOM300</td><td>35</td><td>75</td><td>Forte</td></tr>
+                        <tr><td>BOOM500</td><td>38</td><td>78</td><td>Forte</td></tr>
+                        <tr><td>BOOM600</td><td>40</td><td>80</td><td>Violento</td></tr>
+                        <tr><td>BOOM900</td><td>42</td><td>82</td><td>Muito Violento</td></tr>
+                        <tr><td>BOOM1000</td><td>45</td><td>85</td><td>Extremo</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- SEÇÃO 5: ESTRATÉGIA PARA ATIVOS NORMAIS (NOVA) -->
+            <div class="manual-section">
+                <h3>📈 Estratégia para Ativos Normais</h3>
+                
+                <h4>Volatility Indices (R_10, R_25, R_50, R_75, R_100, etc.)</h4>
+                <ul>
+                    <li><strong>Comportamento:</strong> Tendências consistentes com volatilidade constante</li>
+                    <li><strong>Estratégia:</strong> Seguir a tendência dos timeframes maiores (H4/H1)</li>
+                    <li><strong>Entrada:</strong> Quando M1/M5 alinharem com a tendência e RSI entre 40-60</li>
+                    <li><strong>Saída:</strong> Quando RSI atingir 70 (sobrecomprado) ou 30 (sobrevendido)</li>
+                    <li><strong>Stop:</strong> 15-20 pontos (dependendo da volatilidade)</li>
+                </ul>
+
+                <h4>Forex (EUR/USD, GBP/USD, USD/JPY, etc.)</h4>
+                <ul>
+                    <li><strong>Comportamento:</strong> Movimentos mais lentos e previsíveis</li>
+                    <li><strong>Estratégia:</strong> Operar nos horários de maior liquidez (Londres/Nova York)</li>
+                    <li><strong>Entrada:</strong> Aguardar TIMING OK no M15 com RSI entre 45-55</li>
+                    <li><strong>Saída:</strong> Quando RSI atingir 65 ou 35</li>
+                    <li><strong>Stop:</strong> 20-30 pontos (dependendo do par)</li>
+                </ul>
+
+                <h4>Commodities (XAU/USD, XAG/USD, USOIL)</h4>
+                <ul>
+                    <li><strong>Comportamento:</strong> Tendências fortes com correções técnicas</li>
+                    <li><strong>Estratégia:</strong> Seguir H4/H1, entrar nas correções com M5/M15</li>
+                    <li><strong>Entrada:</strong> Quando RSI do M1 < 35 (comprar) ou > 65 (vender)</li>
+                    <li><strong>Stop:</strong> 50-100 pontos (dependendo do ativo)</li>
+                </ul>
+
+                <h4>Cryptocurrencies (BTC/USD, ETH/USD, etc.)</h4>
+                <ul>
+                    <li><strong>Comportamento:</strong> Alta volatilidade, movimentos bruscos</li>
+                    <li><strong>Estratégia:</strong> Usar stops apertados, operar em timeframes menores</li>
+                    <li><strong>Entrada:</strong> Quando M1 com TIMING OK e RSI entre 30-70</li>
+                    <li><strong>Saída:</strong> Rápida, 10-20 minutos de duração</li>
+                    <li><strong>Stop:</strong> 50-100 pontos (dependendo da cripto)</li>
+                </ul>
+
+                <h4>Stock Indices (US500, USTEC, US30, etc.)</h4>
+                <ul>
+                    <li><strong>Comportamento:</strong> Tendências de médio/longo prazo</li>
+                    <li><strong>Estratégia:</strong> Operar com PESCADOR, usar SNIPER para entradas precisas</li>
+                    <li><strong>Entrada:</strong> Quando M15 com TIMING OK e RSI 40-60</li>
+                    <li><strong>Saída:</strong> Quando RSI > 70 ou < 30</li>
+                    <li><strong>Stop:</strong> 100-200 pontos (dependendo do índice)</li>
+                </ul>
+            </div>
+
+            <!-- SEÇÃO 6: DETECTOR DE CICLO -->
             <div class="manual-section">
                 <h3>🔄 Detector de Ciclo para CRASH/BOOM</h3>
                 
@@ -1655,7 +1709,7 @@
                 </ul>
             </div>
 
-            <!-- SEÇÃO 5: PONTO FRANCO (NOVA) -->
+            <!-- SEÇÃO 7: PONTO FRANCO -->
             <div class="manual-section">
                 <h3>⚡ Ponto Franco - Entrada Perfeita</h3>
                 
@@ -1671,7 +1725,7 @@
                 <p><strong>Duração:</strong> 5-15 minutos</p>
             </div>
 
-            <!-- SEÇÃO 6: ALINHAMENTO PESCADOR-SNIPER (NOVA) -->
+            <!-- SEÇÃO 8: ALINHAMENTO PESCADOR-SNIPER -->
             <div class="manual-section">
                 <h3>🎯 Alinhamento Pescador-Sniper</h3>
                 
@@ -1692,7 +1746,7 @@
                 <p><strong>Regra de Ouro:</strong> NUNCA entre contra o PESCADOR. Espere o SNIPER alinhar!</p>
             </div>
 
-            <!-- SEÇÃO 7: EXEMPLO PRÁTICO CRASH (NOVA) -->
+            <!-- SEÇÃO 9: EXEMPLO PRÁTICO CRASH 1000 -->
             <div class="manual-section">
                 <h3>📈 Exemplo Prático - Crash 1000</h3>
                 
@@ -1723,7 +1777,42 @@
                 </ul>
             </div>
 
-            <!-- SEÇÃO 8: COMO OPERAR EM 3 PASSOS -->
+            <!-- SEÇÃO 10: EXEMPLO PRÁTICO CRASH 500 -->
+            <div class="manual-section">
+                <h3>📈 Exemplo Prático - Crash 500 (16/03/2026)</h3>
+                
+                <div style="background: var(--bg-white); padding: 12px; border-radius: 8px; margin-bottom: 12px;">
+                    <p><strong>Data:</strong> 16/03/2026 - 06:07 às 07:48<br>
+                    <strong>Ativo:</strong> Crash 500 Index<br>
+                    <strong>Movimento:</strong> +21.73 pontos em 1h41min</p>
+                </div>
+
+                <p><strong>FUNDOS DETECTADOS:</strong></p>
+                <ul>
+                    <li>06:07 - RSI 40 → COMPRAR</li>
+                    <li>07:26 - RSI 26 → COMPRAR (+8.22)</li>
+                    <li>07:42 - RSI 31 → COMPRAR (+3.16)</li>
+                    <li>07:48 - RSI 28 → COMPRAR (+4.05)</li>
+                </ul>
+
+                <p><strong>TOPO DETECTADO:</strong> 07:06 - RSI 100 → VENDER</p>
+                
+                <p><strong>LIÇÃO:</strong> Crash 500 é "maratonista" - faz vários fundos antes de subir forte!</p>
+            </div>
+
+            <!-- SEÇÃO 11: QUANDO OS MODOS DIVERGEM -->
+            <div class="manual-section">
+                <h3>🔄 Quando os Modos Divergem</h3>
+                
+                <h4>Regra dos 3 Passos:</h4>
+                <ol style="list-style-type: none; padding-left: 0;">
+                    <li style="margin-bottom: 10px;"><strong>1. SIGA O PESCADOR</strong> (tendência real) → PESCADOR com H4 forte é a verdade</li>
+                    <li style="margin-bottom: 10px;"><strong>2. ESPERE O SNIPER</strong> (timing) → Só entre quando SNIPER alinhar com PESCADOR</li>
+                    <li style="margin-bottom: 10px;"><strong>3. NUNCA OPERE CONTRA O H4</strong> → H4 é rei - não se discute</li>
+                </ol>
+            </div>
+
+            <!-- SEÇÃO 12: COMO OPERAR EM 3 PASSOS -->
             <div class="manual-section">
                 <h3>🚦 Como Operar em 3 Passos</h3>
                 
@@ -1748,7 +1837,7 @@
                 </ul>
             </div>
 
-            <!-- SEÇÃO 9: ALERTAS -->
+            <!-- SEÇÃO 13: ALERTAS -->
             <div class="manual-section">
                 <h3>⚠️ Alertas (Não Ignore!)</h3>
                 <ul>
@@ -1759,7 +1848,47 @@
                 </ul>
             </div>
 
-            <!-- SEÇÃO 10: 10 REGRAS DE OURO ATUALIZADAS -->
+            <!-- SEÇÃO 14: CHECKLIST RÁPIDO -->
+            <div class="manual-section">
+                <h3>✅ Checklist Rápido (30 segundos)</h3>
+                
+                <div class="checklist-item"><input type="checkbox"> H4 e H1 na mesma direção?</div>
+                <div class="checklist-item"><input type="checkbox"> ADX do H4 > 20?</div>
+                <div class="checklist-item"><input type="checkbox"> M5 com TIMING OK?</div>
+                <div class="checklist-item"><input type="checkbox"> Confiança > 50%?</div>
+                <div class="checklist-item"><input type="checkbox"> Sem alertas ⚠️?</div>
+                <div class="checklist-item"><input type="checkbox"> RSI dentro dos limites do ativo?</div>
+            </div>
+
+            <!-- SEÇÃO 15: GLOSSÁRIO ILUSTRADO -->
+            <div class="manual-section">
+                <h3>📖 Glossário Ilustrado</h3>
+                
+                <div style="display: grid; gap: 10px;">
+                    <div style="background: var(--bg-white); padding: 8px; border-radius: 6px;"><strong>🔴 PONTO FRANCO:</strong> H4 forte + M1 extremo = movimento violento</div>
+                    <div style="background: var(--bg-white); padding: 8px; border-radius: 6px;"><strong>🟢 TIMING OK:</strong> Momento ideal para entrada</div>
+                    <div style="background: var(--bg-white); padding: 8px; border-radius: 6px;"><strong>⏳ AGUARDAR:</strong> Espere 1-5 minutos</div>
+                    <div style="background: var(--bg-white); padding: 8px; border-radius: 6px;"><strong>📊 DIVERGÊNCIA:</strong> Timeframes em direções opostas</div>
+                    <div style="background: var(--bg-white); padding: 8px; border-radius: 6px;"><strong>📈 CONVERGÊNCIA:</strong> Todos timeframes na mesma direção</div>
+                </div>
+            </div>
+
+            <!-- SEÇÃO 16: 5 ERROS COMUNS -->
+            <div class="manual-section">
+                <h3>❌ 5 Erros Que Matam Sua Banca</h3>
+                
+                <ol style="list-style-type: none; padding-left: 0;">
+                    <li style="margin-bottom: 8px; padding: 8px; background: rgba(220,38,38,0.05); border-radius: 6px;"><strong>1. Operar contra o H4</strong> - o rei não se discute</li>
+                    <li style="margin-bottom: 8px; padding: 8px; background: rgba(220,38,38,0.05); border-radius: 6px;"><strong>2. Ignorar alertas ⚠️</strong> - o bot avisa antes</li>
+                    <li style="margin-bottom: 8px; padding: 8px; background: rgba(220,38,38,0.05); border-radius: 6px;"><strong>3. Entrar com AGUARDAR</strong> - timing errado</li>
+                    <li style="margin-bottom: 8px; padding: 8px; background: rgba(220,38,38,0.05); border-radius: 6px;"><strong>4. Confiar em confiança &lt; 30%</strong> - risco alto</li>
+                    <li style="margin-bottom: 8px; padding: 8px; background: rgba(220,38,38,0.05); border-radius: 6px;"><strong>5. Não usar stop-loss</strong> - sempre use!</li>
+                </ol>
+                
+                <p style="color: var(--primary); font-weight: 600;">Lembre-se: O bot avisa antes - a culpa é sua se ignorar!</p>
+            </div>
+
+            <!-- SEÇÃO 17: 10 REGRAS DE OURO -->
             <div class="manual-section">
                 <h3>🏆 10 Regras de Ouro</h3>
                 <div class="golden-rules">
@@ -1770,15 +1899,15 @@
                     <div class="golden-rule"><span>TIMING OK = entre, AGUARDAR = espere</span></div>
                     <div class="golden-rule"><span>CRASH: RSI > 60 é TOPO, RSI < 35 é FUNDO</span></div>
                     <div class="golden-rule"><span>BOOM: RSI > 65 é TOPO, RSI < 40 é FUNDO</span></div>
-                    <div class="golden-rule"><span>Divergência MACD = NÃO OPERE</span></div>
-                    <div class="golden-rule"><span>Confiança &lt; 50% = lote pequeno</span></div>
+                    <div class="golden-rule"><span>Volatility: RSI > 70 vender, < 30 comprar</span></div>
+                    <div class="golden-rule"><span>Forex: RSI 45-55 = zona de entrada</span></div>
                     <div class="golden-rule"><span>PONTO FRANCO = H4 forte + M1 extremo = OPERAÇÃO PERFEITA</span></div>
                 </div>
             </div>
 
             <!-- AVISO FINAL -->
             <div style="text-align: center; color: var(--text-light); font-size: 10px; margin-top: 20px;">
-                Manual v2.2.0 | Atualizado em 16/03/2026 | Estratégia para CRASH/BOOM/JUMP/STEP
+                Manual v3.0.0 | Atualizado em 16/03/2026 | Estratégia completa para TODOS os ativos
             </div>
         </div>
     </div>
